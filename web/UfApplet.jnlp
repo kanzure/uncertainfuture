@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <jnlp codebase="." href="UfApplet.jnlp">
+     <information>
+       <title>Uncertain Future</title>
+       <vendor>Singularity Institute for Artificial Intelligence</vendor>
+       <offline-allowed />
+     </information>
+     <resources>
+       <j2se version="1.6+"
+             href="http://java.sun.com/products/autodl/j2se" />
+       <jar href="UfApplet.jar" main="true" />
+       <jar href="commons-math-1.2.jar" />
+     </resources>
+     <applet-desc 
+         name="The Uncertain Future"
+         main-class="org.singinst.uf.view.UfApplet"
+         width="710"
+         height="540">
+     </applet-desc>
+ </jnlp>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">
+  <head>
+    <title>The Uncertain Future</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" type="text/css" href="style/main.css" /> 
+		<script type="text/javascript" src="http://java.com/js/deployJava.js"></script>
+<!--		<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script> -->
+		<script type="text/javascript" src="js/json2.js"></script>
+		<script type="text/javascript">
+
+	function clog(str) {
+/*	  if (console && console.log)
+	    console.log(str);*/
+	}
+  var attributes = { code:'org.singinst.uf.view.UfApplet',
+archive:'UfApplet.jar,commons-math-1.2.jar',  width:900, height:660, mayscript: true} ; 
+  var parameters = {jnlp_href: 'UfApplet.jnlp'} ; 
+    deployJava.runApplet(attributes, parameters, '1.5'); 
+
+	function loadData(jsonObj) {
+/*		clog("loadData:" + JSON.stringify(jsonObj));*/
+	  var json = JSON.stringify(jsonObj);
+	  if (getBrowser() == "ie") {
+	    alert("We're sorry, but this functionality isn't currently supported in IE.");
+	  } else {
+      top.document.applets[0].loadData(json); // This fails on IE
+	  }
+	}
+function getBrowser() {
+        //      alert("userAgent: " + navigator.userAgent + ", appName: " + navigator.appName);
+        var agent = navigator.userAgent;
+        if (agent.indexOf("Firefox") != -1)
+                        return "ff";
+        else if (agent.indexOf("Safari") != -1)
+                        return "sf";
+        else {
+                        var name = navigator.appName;
+                        if (name.indexOf("Internet Explorer") != -1)
+                                return "ie";
+                        else
+                                return "unknown";
+	      }
+	  }
+		</script>
+  </head>
+  <body>
+    <div id="sidebar-wrap">
+			<iframe id="sidebar" name="ufHelp" src="ufHelp/Q1.html"/>
+    </div> <!-- #sidebar-wrap -->
+  </body>
+</html>

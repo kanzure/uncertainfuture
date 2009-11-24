@@ -1,0 +1,123 @@
+<head>
+<script>
+	function loadDistribution(name, mean, stdDev) {
+			var args = 
+					{
+							"caption": "Loaded our interpretation of " + name + "\'s probability distribution.",
+							"Q9-1.mean": mean,
+							"Q9-1.stdDev": stdDev
+					};
+			top.loadData(args);
+	}
+</script>
+</head>
+<body>
+<P CLASS="western" STYLE="margin-bottom: 0in"><B>Question 9: Will
+Intelligence Enhancement Change the Picture?</B></P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Question 9 focuses on
+human intelligence enhancement, sometimes called IA (Intelligence
+Amplification). Several sub-questions explore one approach to
+intelligence enhancement, namely embryo selection, which relies on existing
+technologies and well-understood biology. Numerous other possible
+approaches exist, such as brain training games,
+intelligence-enhancing pharmaceuticals, and brain-computer
+interfaces. Any type of IA is important, because it could accelerate
+technological progress.
+</P>
+
+<P CLASS="western" STYLE="margin-bottom: 0in">Gene sequencing costs
+have been dropping exponentially for some time. Here is a graph (from
+Kurzweil (2005)) that shows the trend from 1990 to 2004:
+</P>
+<P><IMG SRC="../img/kurzweil-graph-sequencing.png" ALT="Graph of exponentially dropping gene sequencing costs"/></P>
+
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>Embryo selection
+for intelligence would depend upon the availability and cost of
+sequenced genomes. When will it be possible to sequence an entire
+human genome for less than $1000?</P>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-top: 0.19in; margin-bottom: 0in">
+	<B>Claim:  </B>George Church, a professor of genetics and director
+	of the center for computational genetics at Harvard, said the
+	initial PGP data set will include DNA sequence information on 50,000
+	exons, and predicted that scientists will reach the $1,000 human
+	genome next year: &quot;You guys can hold me to this,&quot; he said.
+	<BR>
+	<B>Implication: </B>A $1,000
+	genome is imminent.
+	<input type="button" onclick="loadDistribution('Church', 1.7782, 0.008);" value="Load distribution"</input><BR>
+	<B>Source:</B> Genome Web. &quot;PGP to Publish
+	Initial Data Sets Next Month As Church Predicts $1,000 Genome in
+	2009&quot;. 23 September 2008. 
+	&lt;<FONT COLOR="#000080"><U><A TARGET="_blank" HREF="http://www.genomeweb.com/sequencing/pgp-publish-initial-data-sets-next-month-church-predicts-1000-genome-2009">http://www.genomeweb.com/sequencing/pgp-publish-initial-data-sets-next-month-church-predicts-1000-genome-2009</A></U></FONT>&gt;
+	</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0in">
+	<B>Claim:</B>
+	The first human genome cost
+	either $3 billion (Human Genome Project) or $300 million (Celera
+	Genomics) in 2001, James Watson's genome cost $2 million in 2007,
+	and Applied Biosystems sequenced a human genome for $60,000 in two
+	weeks in March 2008. One company, Intelligent
+	Bio-systems, has claimed they will be able to provide $5,000 
+	genomes by the end of 2008. <BR>
+	<B>Implication:</B> The number of human
+	genomes we can sequence for a fixed cost has been increasing at a
+	sharp exponential, often exceeding earlier expectations.
+	<input type="button" onclick="loadDistribution('Chu', 1.7782, 0.0184);" value="Load distribution"</input><BR>
+	<B>Sources:</B>
+	Chu, Wai Lang. &quot;Applied Bio sequences a human genome for
+	$60,000.&quot; LabTechnologist.com. 18 Mar. 2008.
+	&lt;<U><A TARGET="_blank" HREF="http://www.labtechnologist.com/products/applied-bio-sequences-a-human-genome-for-60-000" TARGET="_blank">http://www.labtechnologist.com/products/applied-bio-sequences-a-human-genome-for-60-000</A></U>&gt;.<BR>
+	Singer, Emily. &quot;The $2 Million Genome.&quot; Technology Review. 1 June
+	2007. Massachusetts Institute of Technology.
+	&lt;<U><A TARGET="_blank" HREF="http://www.technologyreview.com/biotech/18809/">http://www.technologyreview.com/biotech/18809/</A></U>&gt;.<BR>
+	Singer, Emily. &quot;Five Thousand Bucks for Your Genome.&quot; Technology
+	Review. 6 October 2008. Massachusetts Institute of Technology.
+&lt;<U><A TARGET="_blank" HREF="http://www.technologyreview.com/biomedicine/21466/">http://www.technologyreview.com/biomedicine/21466/</FONT></A></U>&gt;<BR>
+	</P>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0in">
+	<B>Claim:</B>
+	The cost of gene sequencing (per base pair) has been decreasing
+	exponentially since 1970.<BR>
+	<B>Implication:</B>
+	Unless something changes, exponential growth in capability will
+	probably continue into the future.
+	<input type="button" onclick="loadDistribution('Shendure', 1.785, 0.025);" value="Load distribution"</input><BR>
+	<B>Source:</B>
+	Shendure, Jay, Robi D. Mitra, Chris Varma, and George M.
+	Church.<BR>&quot;Advanced Sequencing Technologies: Methods and
+	Goals.&quot; Nature Reviews Genetics 5 (2004): 335-44.
+	&lt;<FONT COLOR="#000080"><U><A TARGET="_blank" HREF="http://www.nature.com/nrg/journal/v5/n5/abs/nrg1325_fs.html" TARGET="_blank">http://www.nature.com/nrg/journal/v5/n5/abs/nrg1325_fs.html</A></U></FONT>&gt;.</P>
+</UL>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0in">
+	<B>Claim:</B>
+	The NHGRI, a government institute, has awarded grants to researchers
+	with the goal of reducing sequencing costs to $1,000/human genome by
+	2014.<BR>
+	<B>Implication:</B>
+	A price of $1,000 per genome is a viable research goal in the near
+	term and is already being actively funded.
+	<input type="button" onclick="loadDistribution('NHGRI', 1.8062, 0.0158);" value="Load distribution"</input><BR>
+	<B>Source:</B>
+	Genome Web. &quot;With $100K Genome in Reach, NHGRI Focuses Advanced-Sequencing Program on
+	$1,000 Goal.&quot;  2 September 2008.
+	&lt;<U><A TARGET="_blank" HREF="http://www.genomeweb.com/sequencing/100k-genome-reach-nhgri-focuses-advanced-sequencing-program-1000-goal">http://www.genomeweb.com/sequencing/100k-genome-reach-nhgri-focuses-advanced-sequencing-program-1000-goal</A></U>&gt;.
+	</P>
+</UL>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-bottom: 0in">
+	<B>Claim:</B>
+	23andMe, a private company, tests for 600,000 single nucleotide
+	polymorphisms (SNPs) in private individuals for $399.<BR>
+	<B>Implication:</B>
+	There is a large consumer demand for genomics, so research in this
+	area will continue to be heavily funded.<BR>
+	<B>Source:</B> &quot;23
+	and Me.&quot; 24 July 2008. Retrieved 9 Aug. 2008.
+	&lt;<U><A TARGET="_blank" HREF="https://www.23andme.com/" TARGET="_blank">https://www.23andme.com/</A></U>&gt;.</P>
+</UL>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+</body>
+
