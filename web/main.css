@@ -11,12 +11,6 @@ h1 {
 		font-size: 1.8em;
 }
 
-#faqmenu li {
-	margin-top:8px;
-	margin-bottom:8px;
-	font-size:1.2em;
-}
-
 div#wrap {
 	width: 900px; 
 	margin: 0 auto;	
@@ -39,7 +33,6 @@ a, a:visited {
 
 #sidebar {
 		width: 900px;
-		height: 500px;
 		background-color: #EEEEEE;
 /*		float: left;*/
 }

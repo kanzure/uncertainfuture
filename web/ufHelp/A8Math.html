@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="sv" xmlns="http://www.w3.org/1999/xhtml" lang="sv"><head>
+
+
+  
+    <title>A8 Math</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="../style/main.css"> 
+  </head><body>
+    <div id="wrap">
+			<div id="header">
+			</div>
+      <div id="content">
+<h1>A8 Math: The Long Version</h1>
+<p>Here, we'll give you the gory math details behind the "world
+according to you" in answer A8. You may wish to read the friendly
+explanation under A8 first.</p><br><br><b>Different probabilities of disaster</b><br>To create graph A8, we combined two kinds of disaster: nuclear, and "everything else". In any year, if:<br><br>P6: A nuclear war has happened, or:<br>P7: Some other disaster has happened, then:<br><br>A8: Some disaster has happened.<br><br>So to find A8, we need to find P6 and P7, then combine them.<br><br><b>Setting P6</b><br>P6
+records whether a major nuclear war, big enough to seriously set back
+science worldwide, has taken place. At each year, it can say, "yes:
+nuclear war has happened", or: "no: nuclear war has not happened", with
+a probability attached to both.&nbsp;<br><br>In question Q7, you got to
+put in the distribution by setting a few parameters. We'll now explain
+how we translated this input into a probability that nuclear war has
+happened.<br><br>First, there's a random variable that we called the world's "disaster-proneness". We gave this a <a href="http://en.wikipedia.org/wiki/Normal_distribution">standard normal</a> distribution: that is, a mean of <img src="A8Math_files/png_004.png"> and a standard deviation of <img src="A8Math_files/png_006.png">.
+Once this is set, it's constant: that is, it does not depend on what
+year it is. So we assume that if the world is surprisingly prone to
+nuclear war in 2010, it will still be surprisingly prone to nuclear war
+in 2070. But if you expect nuclear war to be largely a solved problem
+by 2070 no matter what, then, of course, "surprisingly prone" will
+still translate to a small annual probability by then.<br><br>More
+concretely, you entered four parameters: a mean and s.d. at the
+starting year, 2010, and a mean and s.d. at the final year, 2070. As
+you can tell from the graph, we calculate a mean and s.d. (of the log)
+for each year by assuming they change linearly between the 2010 and
+2070 values.<br><br>Now we combine the mean and s.d. with
+disaster-proneness: for example, if disaster-proneness is .5, the mean
+is 6, and the s.d. is 2, the outcome is 6 + .5*2 = 7.<br><br>We interpret this as (proportional to) the logarithm of the <i>expected number of events per year</i>, or the <i>instantaneous rate at which events occur</i>.
+(Doubling the rate at which events occur doubles the expected number
+per year; this is because we assume the events are independent.
+Realistically, a first nuclear war would reduce the rate at which
+nuclear wars occurred afterwards, but the model stops at the first
+nuclear war, so the independence assumption doesn't affect the model
+results.) And once we have an instantaneous rate, we can calculate an
+annual probability.<br><br>If the disaster-proneness is <img src="A8Math_files/png_003.png">, the formula for the instantaneous disaster rate <img src="A8Math_files/png_010.png"> is:<br><br><img src="A8Math_files/png_008.png">, with <img src="A8Math_files/png_009.png"> and <img src="A8Math_files/png_011.png">.<br><br>In total, after accounting for "disaster-proneness", the disaster rate is distributed according to a <a href="http://en.wikipedia.org/wiki/Log-normal_distribution">lognormal distribution</a>:<br><br><img src="A8Math_files/png.png">.<br><br>(If you want to know why we used a lognormal distribution, read our <a href="http://www.theuncertainfuture.com/faq.html#lognormal">FAQ entry</a>.)<br><br>The
+probability that a disaster happens (or would have happened multiple
+times) in any year T follows from the (average) rate R over that year:<br><img src="A8Math_files/png_005.png"><br>The probability that disaster has happened in a year T or earlier is:<br><img src="A8Math_files/png_007.png"><br>To find the total probability, before you know what the disaster-proneness is, average over all values of <img src="A8Math_files/png_003.png">:<br><img src="A8Math_files/png_002.png"><br><br>In sum:<br>
+<ul>
+<li>Whether a disaster has happened depends (randomly) on the disaster rate for all past times</li>
+<li>The past rate depends on the "disaster-proneness" and your input
+for the start and end distributions, with a single value for
+disaster-proneness determining all rates, so disaster rates are
+perfectly correlated across time</li>
+<li>Disaster-proneness is itself a random (standard normal) variable.</li>
+</ul>
+<br><br><b>Setting P7</b><br>The math of how P7 was set is exactly the
+same as the math of how P6 was set; we just gave the result a different
+name and interpretation. All the nuclear disaster probabilities are <a href="http://en.wikipedia.org/wiki/Independence_%28probability_theory%29">independent</a> of all the non-nuclear disaster probabilities.<br><br><b>Combining Both</b><br>We
+have the probability nuclear disaster happened, and the probability
+some other disaster happened. What we want is the probability that a
+nuclear <i>or</i> other disaster happened. Correcting for double-counting cases where both happen, we have:<br><br>Prob(A8: disaster happened) = Prob(P6: nuclear disaster happened) + Prob(P7: other disaster happened) - Prob(P6 <i>and</i> P7)<br><br>Conveniently enough, we're assuming both kinds of disaster are probabilistically <a href="http://en.wikipedia.org/wiki/Independence_%28probability_theory%29">independent</a>.
+(Or we're pretending that the model ends when a disaster happens, which
+leads to the same answer). So the probability we're looking for in the
+last term is the product of the individual probabilities:<br><br>Prob(A8) = Prob(P6) + Prob(P7) - Prob(P6) * Prob(P7).<br><br>That's it! We now have a probability for A8 each year. This is what you see in the graph.<br><br><br><a href="javascript:window.close()">Return to your calculation</a></div></div></body></html>

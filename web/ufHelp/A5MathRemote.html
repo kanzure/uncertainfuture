@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">
+  <head>
+    <title>A5 Math</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" type="text/css" href="../style/main.css" /> 
+  </head>
+  <body>
+    <div id="wrap">
+			<div id="header">
+			</div>
+      <div id="content">
+<H1>A5 Math: The Long Version</H1>
+
+<p>Here, we'll give you the gory math details behind the "world according to you" in answer A5. You may wish to read the friendly explanation under A5 first.<br
+/><br
+/><b>A highly simplified model</b><br
+/>In crafting output graph A5, we use a highly simplified model.&nbsp; We assume that if:<br
+/><br
+/>P1:&nbsp; AI is possible in principle; and<br
+/>P2:&nbsp; We have hardware enough to run neuromorphic AI; and<br
+/>P3:&nbsp; We have enough neuroscience and other knowledge to know how to build neuromorphic AI, then<br
+/><br
+/>A5: Neuromorphic AI will be built.<br
+/><br
+/>Each of propositions P1, P2, P3, is assigned a probability based on your answers to Q1 through Q5.&nbsp; These probabilities are then multiplied to get the "probability of neuromorphic AI, according to you" in A5.&nbsp; For example:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>Prob(A5: We have neuromorphic AI in the year 2030) = Prob(P1: AI is possible in principle) * Prob(P2: We have enough hardware in 2030) * Prob(P3: We have enough knowledge of how the brain works in 2030).<br
+/><br
+/>Again, P1 through P3 get their probabilities from your answers.&nbsp; If you enter different answers for questions Q1 through Q5, you'll get a different A5 graph out.<br
+/><br
+/>(If this model seems ridiculously simplistic, don't despair.&nbsp; You'll get to create a less ridiculously simplistic model of AI in A10, after you answer more questions.)<br
+/><br
+/><b>How P1 is set</b><br
+/>P1 records whether AI is possible in principle.&nbsp; P1 does not vary by year: we're imagining that the gods roll dice before history starts, and, unbeknownst to us, the dice come up saying AI is permanently either possible or impossible.&nbsp; In Q1, you choose the weighting on the gods' dice: you input the probability Prob(P1) that AI is possible in principle.<br
+/><br
+/><b>How P3 is set</b><br
+/>P3 records whether we have enough neuroscience knowledge to be able to build neuromorphic (brain-like) AI if given enough hardware.&nbsp; P3 <i>does</i> vary by year: our brain knowledge might be insufficient in 2030, but sufficient in 2040.<br
+/><br
+/>So, for P3, we might imagine the gods roll dice continually while history runs. At any year from 2010 to the model's end in 2070, the dice can come up saying, "yes: neuroscience has made enough progress". But some years are more likely than others, and your inputs determine which years are more likely.<br
+/><br
+/>(Keep in mind that what comes out of our model isn't one random run of history. It's how the outcomes of all possible runs are distributed; the math that determines this distribution isn't itself random.)<br
+/><br
+/>More specifically, your input on question Q5 determines a <a href = "http://en.wikipedia.org/wiki/Log-normal_distribution">lognormal distribution</a> on the year we'll have enough neuroscience knowledge. (We imagined the gods rolling dice continually; but actually, if you believe in lognormal dice, it's simpler to imagine the gods reading off a year from one of those at the beginning of time. There's a way to <a href = "http://en.wikipedia.org/wiki/Hazard_rate">calculate</a> what the dice weightings for rolling continually would need to be.)&nbsp;<br
+/><br
+/>If mu and sigma are the mean and standard deviation (of the logarithm) you choose in Q5, the <a href = "http://en.wikipedia.org/wiki/Probability_density_function">probability density</a> that P3 will become "sufficient brain knowledge" <i>at time t</i> is<br
+/><br
+/><img src = "http://www.codecogs.com/png.latex?f(t) = \frac{1}{\sigma \sqrt{2 \pi}(t - 1950)} e^{-\frac{(\ln(t - 1950)- \mu)^2}{2 \sigma^2}}"><br
+/><br
+/>and the cumulative probability that P3 will have become "sufficient brain knowledge" <i>any time before time t</i> is:<br
+/><br
+/><img src = "http://www.codecogs.com/png.latex?F(t) = \int_{2010}^t f(t') dt'"><br
+/><br
+/>(If you want to know why we used a lognormal distribution, <a href = "http://www.theuncertainfuture.com/faq.html#lognormal">read our FAQ entry</a>.&nbsp; 1950 was chosen as the zero point for the lognormal because it was the approximate beginning of serious AI work.)<br
+/><br
+/><b>How P2 is set</b><br
+/>P2 records whether the best-funded project has enough hardware so that, with enough knowledge, it could simulate neuromorphic AI. You chose the distributions for P1 and P3 for yourself. But P2 depends on three variables:<br
+/><br
+/>V1: The amount of computing power available for a dollar.<br
+/>V2: The money available to the best-funded project.<br
+/>V3: The amount of computing power needed for neuromorphic AI.<br
+/><br
+/>For P2 to hold, the amount of computer power the best-funded project can buy for the money it has available has to be at least equal to the amount of computing power needed for neuromorphic AI. Taking 2030 as an example, in math:<br
+/><br
+/>Prob(P2: The best-funded project has enough hardware in 2030) = Prob(V1 (computing power per dollar in 2030) * V2 (dollars available) &gt; V3 (computing power needed)) = Prob(V1 &gt; V3/V2).<br
+/><br
+/><b>money, hardware</b><br
+/>V2 and V3, money available and computing power needed, are both set at the beginning of time: both are some unknown number that stays the same throughout the years. Again, we give these numbers lognormal distributions. You set the parameters by answering question Q4 and Q3.<br
+/><br
+/>You can see V3/V2, computing power needed divided by money available, as an <i>efficiency threshold</i>: if you can get more hardware for a dollar than this threshold, P2 holds. Dividing a lognormal variable by another amounts to subtracting a normal variable (the log) from another. And the difference between two normal variables is normal with <img src = "http://www.codecogs.com/png.latex?\mu = \mu_1 - \mu_2"> and <img src = "http://www.codecogs.com/png.latex?\sigma^2 = \sigma_1^2 + \sigma_2^2">. So our efficiency threshold is lognormally distributed with these parameters.<br
+/><br
+/><b>efficiency</b><br
+/>V1, the other side of the equation, is a little more complicated. In Q2 you gave a "year when Moore's law stops". But actually the model doesn't have Moore's law stopping abruptly, with hardware available per dollar suddenly bumping into ceiling X. Instead, it gradually approaches X as an asymptote.<br
+/><br
+/>Furthermore, you don't know what X is: the ending year you gave had a normal distribution around it. As long as Moore's law continues, hardware per dollar rises exponentially; and so this normal distribution for the ending year gives you a lognormal distribution for the <i>long-run limit</i>. Before this limit, the distribution we use is more complicated; see <a href = "#footnote">footnote</a>.<br
+/><br
+/>Now that we've turned your answers into probability distributions for the efficiency (V1) and the efficiency threshold (V3/V2), what remains is to compare these, outputting a final probability for P2 each year. For details on how we did this, see <a href = "#footnote">footnote</a>.<br
+/><br
+/>That's it! We now have probabilities for P1, P2 and P3 each year. The product of these for each year is A5.&nbsp;<br
+/><br
+/><a name = "#footnote">footnote:</a><br><img src = "http://www.codecogs.com/png.latex?\mbox{ln.threshold (effectively) } \sim N(\mu_\theta, \sigma_\theta^2)"><br
+/><img src = "http://www.codecogs.com/png.latex?\mbox{ln.limit } \sim N(\mu_K, \sigma_K^2)"><br
+/><img src = "http://www.codecogs.com/png.latex?\mbox{ln.efficiency } \leftarrow -\ln(e^{-\mbox{ln.extrapolation}} + e^{-\mbox{ln.limit}})"><br
+/><img src = "http://www.codecogs.com/png.latex?\mbox{sufficient.efficiency } \leftarrow"> <img src = "http://www.codecogs.com/png.latex?\mbox{heaviside.}\Phi(\mbox{ln.efficiency }- \mbox{ ln.threshold})"><br
+/><p><a href="JavaScript:window.close()">Return to your calculation</a></p></div></body>
+</html>

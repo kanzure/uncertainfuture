@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">
+  <head>
+    <title>A9 Math</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" type="text/css" href="../style/main.css" /> 
+  </head>
+  <body>
+    <div id="wrap">
+			<div id="header">
+			</div>
+      <div id="content">
+<H1>A9 Math: The Long Version</H1>
+<p>Here, we'll give you the gory math details behind the "world according to you" in answer A9. You may wish to read the friendly explanation under A9 first.</P><br
+/><br
+/><b>Speeding Up AI Research</b><br
+/>Answer A6 showed your distribution for the arrival of AI. It took into account your estimates of the difficulty AI technologies would have with current researchers. But it did not take into account technology creating more effective researchers. Answer A9 does.<br
+/><br
+/>The way we get the result is a little more complicated than the previous times.<br
+/><br
+/><b>What Year It "Really" Is</b><br
+/>Suppose that, on your assumptions, AI <i>would</i> have arrived in 2060. But suppose that, by 2050, because of intelligence enhancement, smarter scientists created ten extra years' worth of progress. Then AI arrives in 2050.<br
+/><br
+/>More generally, for each year <img src = "http://www.codecogs.com/png.latex?T">, we'll need a probability distribution for what year <img src = "http://www.codecogs.com/png.latex?S(T)"> it "really" is. This depends on how many "science years" <img src = "http://www.codecogs.com/png.latex?s(t)"> were achieved in each past year <img src = "http://www.codecogs.com/png.latex?t">:<br
+/><br
+/><img src = "http://www.codecogs.com/png.latex?S(T) = \int_{2010}^T s(t) dt"><br
+/><br
+/><b>How Much Research Gets Done</b><br
+/>So how many "science years" happen in a year? It depends on a few things.<br
+/><br
+/>1. N years ago, how many babies with enhanced research ability were conceived as a result of iterated embryo selection?&nbsp;<br
+/>2. Given genetics knowledge available N years ago, what's the factor by which embryo-selected children conceived then will be more effective?<br
+/><br
+/>These steps are repeated for every N that's at least 20. (We're assuming people under 20 don't contribute to research, and people over 20 don't die or retire before the model ends in 2070.) All these numbers are added to a constant base number of researchers.<br
+/><br
+/>3. <i>Right now</i>, by what factor do other intelligence enhancement technologies increase everyone's research ability?<br
+/><br
+/>This last unknown factor multiplies the total we get from 1 and 2. The factor has a value every year. But it's not reset every year: instead, at the beginning of time, a value is rolled up, once. The factor, by the end year 2070, ends up having a <a href = "http://en.wikipedia.org/wiki/lognormal_distribution">lognormal distribution</a> with a mean and s.d. (for the log) given by your choices of mu and sigma in question Q9. At the start year 2010, the factor is 1. In between, the mean and s.d. (for the log) increase linearly from 0 and 0, to the mu and sigma you entered.<br
+/><br
+/>(Keep in mind that what comes out of our model isn't one random run of history. It's how the outcomes of all possible runs are distributed; the math that determines this distribution isn't itself random.)<br
+/><br
+/>The outcome is some number of researcher-equivalents. We assumed the base number of researchers is 100,000. The ratio of these numbers is the number of "research years" that have gone by. Note that we're assuming a million researchers all working at the same time for one year are as effective as, for example, a thousand researchers working at the same time for a thousand years. We're also assuming that embryo-selected researchers add to the existing number of researchers instead of displacing them.<br
+/><br
+/>In math, if A is the speedup from other enhancement technology, B is the number of embryo-selected future researchers conceived per year, and E is their effectiveness,<br
+/><br
+/><img src = "http://www.codecogs.com/png.latex?s(t) = A(t) * \frac{1}{100,000}(100,000 + \int_{2010}^{t-20} B(t') E(t') dt') "><br
+/><br
+/><b>How Many Selected Scientists?</b><br
+/>Step 1 above asked how many people selected for science were conceived in a given year. That depends on two questions you answered: Q9-2 and Q9-4.<br
+/><br
+/>Q9-2 asked how long until artificial gametes. You entered two parameters, a mean mu and an s.d. sigma, which together determine a <a href = "http://en.wikipedia.org/wiki/lognormal_distribution">lognormal distribution</a>. The probability density that this happens in year t is:<br
+/><br
+/><img src = "http://www.codecogs.com/png.latex?f(t) = \frac{1}{\sigma \sqrt{2 \pi} (t - 1950)} e^{-\frac{(\ln(t - 1950) - \mu)^2}{2 \sigma^2}}"><br
+/><br
+/>Q9-4 asked about the <i>scale</i> on which this technology gets adopted. The 0 to 50 years on the horizontal axis represent the number of years after the technology first gets adopted. This starting point is the one that was randomly set in Q9-2. Again, the scale of adoption has a value every year, but the value doesn't get reset every year. At the beginning of time, a value ("adoption-proneness") is rolled up once. The mean and standard deviation you set for 0 and 50 years afterward determine, as a linear function, a mean and standard deviation of the logarithm of a birth rate for all the years in between. At each year, the scale of adoption ends up being lognormally distributed. As before, if the scale ends one s.d. higher than you expected, it's always one s.d. higher than you expected.<br
+/><br
+/><b>How Effective is Selection?</b><br
+/>Step 2 above asked how effective researchers selected for science ability are. That depends on two questions you answered: Q9-1 and Q9-3.<br
+/><br
+/>Q9-1 asked how long until $1000 genomes. You entered two parameters, a mean mu and a standard deviation sigma, which together determine a <a href = "http://en.wikipedia.org/wiki/Lognormal_distribution">lognormal distribution</a>: The probability density that this happens in year t is:<br
+/><br
+/><img src = "http://www.codecogs.com/png.latex?f(t) = \frac{1}{\sigma \sqrt{2 \pi}(t - 1950)} e^{-\frac{(\ln(t - 1950) - \mu)^2}{2 \sigma^2}}"><br
+/><br
+/>Q9-3 asked about the <i>effectiveness factor</i> of each embryo-selected scientist &mdash that is, the number of typical scientists one of them could replace. The 0 to 50 years on the horizontal axis represent the number of years after we first become able to sequence genomes for $1000 or less. This starting point is the one that was randomly set in Q9-1. Again, the effectiveness factor has a value every year, but the value doesn't get reset every year. At the beginning of time, a value ("effectiveness-proneness") is rolled up once. The mean and s.d. you set for 50 years afterward, together with the fact that it starts at 1 (or in other words, the mean and s.d. of the log start at 0), determines, as a linear function, a mean and s.d. for all the years in between. At each year, the effectiveness factor ends up being lognormally distributed. As before, if the effectiveness factor ends one s.d. higher than you expected, it's always one s.d. higher than you expected.<br
+/><br
+/><b>Summary</b><br
+/>In sum:<br
+/>
+<ul>
+<li>Whether AI has been invented depends probabilistically on how many "research years" have taken place, with some distribution we found in A5.</li>
+<li>How many "research years" have taken place is determined by how many "research years" took place in each past year.</li>
+<li>How many "research years" took place in some past year T is determined by:
+<ul>
+<li>some fixed constant representing a base of unenhanced researchers</li>
+<li>the number of researcher-equivalents from N-year-old embryo-selected researchers, for all N at least 20</li>
+<li>the multiplier, in year T, from other intelligence enhancement technologies</li>
+</ul></li>
+<li>How many researcher-equivalents are available in year T from N-year-old embryo-selected researchers is determined by the scale of adoption of iterated embryo selection in year T-N, and the effectiveness factor from genetic knowledge in year T-N.</li>
+<li>The scale of adoption of iterated embryo selection in year T-N depends on the time since the technology first became available, start and end parameters for a lognormal distribution, and a constant "adoption-proneness"</li>
+<li>The effectiveness factor from genetic knowledge in year T-N depends on the time since $1000 genomes first became available, end parameters for a lognormal distribution, and a constant "effectiveness-proneness"</li>
+</ul>
+<br>
+<br>
+
+All random variables here are independent, with the following exceptions. "Adoption-proneness", at different times, is perfectly correlated; "effectiveness-proneness", at different times, is perfectly correlated; and the multiplier from other intelligence enhancement technologies, at different times, is perfectly correlated.<br
+/><br
+/>Putting all these steps
+together, we find our final distribution for A9, which is shown in the
+graph.
+<p><a href="JavaScript:window.close()">Return to your calculation</a></p></body>
+</html>

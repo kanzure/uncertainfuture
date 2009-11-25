@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">
+  <head>
+    <title>A6 Math</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" type="text/css" href="../style/main.css" /> 
+  </head>
+  <body>
+    <div id="wrap">
+			<div id="header">
+			</div>
+      <div id="content">
+<H1>A6 Math: The Long Version</H1>
+<p>Here, we'll give you the gory math details behind the "world according to you" in answer A6. You may wish to have read read the friendly explanation under A6 first.</p><br
+/><br
+/><b>Neuromorphic or Non-Neuromorphic?</b><br
+/>The model assumes AI can come in two forms: neuromorphic or non-neuromorphic. In any year T, if:<br
+/><br
+/>P4: Neuromorphic AI has been created before T, or<br
+/>P5: Non-neuromorphic AI has been created before T, then<br
+/><br
+/>A6: AI has been created before T.<br
+/><br
+/>So to find A6, we need to find P4 and P5, then combine them.<br
+/><br
+/><b>Setting P4</b><br
+/>P4 records whether neuromorphic AI has been created. At each year, it can say, "yes: neuromorphic AI has been created", or, "no: neuromorphic AI has not been created". The probabilities for these were calculated earlier, in A5, based on your inputs. If you'd like to learn how this was done, <a href = "A5Math.html">see the gory math details for A5</a>.<br
+/><br
+/><b>Setting P5</b><br
+/>P5 records whether non-neuromorphic AI has been created. This question we did not split into different parts: in Q6, you got to choose directly how probable such AI was at what time. Specifically, you got to set the parameters <img src = "http://www.codecogs.com/png.latex?\mu"> and <img src = "http://www.codecogs.com/png.latex?\sigma"> of a <a href = "http://en.wikipedia.org/wiki/lognormal_distribution">lognormal distribution</a>. These represent the mean and standard deviation of the logarithm of the number of years after the starting point. The <a href = "http://en.wikipedia.org/wiki/Probability_density_function">probability density</a> that P5 will first become "non-neuromorphic AI has been created" <i>at time t</i> is:<br
+/><br
+/><img src = "http://www.codecogs.com/png.latex?f(t) = \frac{1}{\sigma \sqrt{2 \pi}(t - 1950)} e^{-\frac{(\ln(t - 1950) - \mu)^2}{2 \sigma^2}}"><br
+/><br
+/>and the cumulative probability that P3 will have become "non-neuromorphic AI has been created" <i>any time before time t</i> is:<br
+/><br
+/><img src = "http://www.codecogs.com/png.latex?F(t) = \int_{2010}^t f(t') dt'"><br
+/><br
+/>(If you want to know why we used a lognormal distribution, read <a href = "http://www.theuncertainfuture.com/faq.html#lognormal">our FAQ entry</a>.&nbsp; 1950 was chosen as the zero point for the lognormal because it was the approximate beginning of serious AI work.)<br
+/><br
+/><b>Combining Both</b><br
+/>We have the probability neuromorphic AI exists, and the probability non-neuromorphic AI exists. What we want is the probability that neuromorphic AI <i>or</i> non-neuromorphic AI exists. Correcting for double-counting cases where both happen, we have:<br
+/><br
+/>Prob(A6: AI has been created) = Prob(P4: neuromorphic AI has been created) + Prob(P5: non-neuromorphic AI has been created) - Prob(P4 <i>and</i> P5)<br
+/><br
+/>Conveniently enough, we're assuming both kinds of AI are <a href = "http://en.wikipedia.org/wiki/Independence_(probability_theory)">probabilistically independent</a>. So the probability we're looking for in the last term is the product of the individual probabilities:<br
+/><br
+/>Prob(A6) = Prob(P4) + Prob(P5) - Prob(P4) * Prob(P5).<br
+/><br
+/>That's it! We now have a probability for A6 each year. This is what you see in the graph.<br
+/><br
+/><a href="JavaScript:window.close()">Return to your calculation</a></body>
+</html>

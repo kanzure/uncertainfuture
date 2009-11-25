@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">
+  <head>
+    <title>A10 Math</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" type="text/css" href="../style/main.css" /> 
+  </head>
+  <body>
+    <div id="wrap">
+			<div id="header">
+			</div>
+      <div id="content">
+<h1>A10 Math: The Long Version</h1>
+<p>Here, we'll give you the gory math details behind the "world according to you" in answer A10. You may wish to read the friendly explanation under A10 first.</p><br
+/><br
+/><b>Kinds of Disruption</b><br
+/>At each year T, a disruption to business-as-usual has happened, or it has not. If:<br
+/><br
+/>P8: A disaster has happened before T, or<br
+/>P9: AI has been created before T, then<br
+/><br
+/>A10: Business-as-usual has been disrupted by time T.<br
+/><br
+/>So to find A10, we need to take P8 and P9, then combine them. P8 and P9 were calculated in previous answers: A8 and A9, respectively. If you'd like to know how this was done, take a look at the gory math details for <a href = "A8Math.html">A8</a> and for <a href = "A9Math.html">A9</a>.<br
+/><br
+/><b>Combining Disaster and AI</b><br
+/>We have the probability a disaster happened, and the probability AI exists. What we want is the probability that a disaster happened <i>or</i> AI exists. Correcting for double-counting cases where both happen, we have:<br
+/><br
+/>Prob(A10: business-as-usual has been disrupted) = Prob(P8: a disaster has happened) + Prob(P9: AI has been created) - Prob(P8 <i>and</i> P9)<br
+/><br
+/>Conveniently enough, we're assuming both kinds of disruption are <a href = "http://en.wikipedia.org/wiki/Independence_(probability_theory)">probabilistically independent</a>. So the probability we're looking for in the last term is the product of the individual probabilities:<br
+/><br
+/>Prob(A10) = Prob(P8) + Prob(P9) - Prob(P8) * Prob(P9).<br
+/><br
+/>That's it! We now have a probability for A10 each year. This is what you see in the graph.<br
+/><br
+/><a href="JavaScript:window.close()">Return to your calculation</a></body>
+</html>
