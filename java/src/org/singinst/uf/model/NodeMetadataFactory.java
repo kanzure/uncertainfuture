@@ -27,11 +27,14 @@ public class NodeMetadataFactory {
 		NodeMetadata c1_9 = constructQ1_9Builder(Arrays.asList(q1_1, q1_2, q1_3, q1_4, q1_5, q1_9_1, q1_9_2, q1_9_3, q1_9_4, q1_9_5, c1_5, c1_6)).build();
 		NodeMetadata c1_10 = constructC1_10Builder(Arrays.asList(c1_8, c1_9)).build();
 
+		// Set default values for graphs
 		setNodeScalars(q1_1, 99);
 		setNodeScalars(q1_2, 10, 11, 12);
 		setNodeScalars(q1_3, 12.5, 2.25);
 		setNodeScalars(q1_4, 5, 1);
-		//setNodeScalars(q1_5, 2018, 0.005);
+//		setNodeScalars(q1_5, 2018, 0.005);
+		setNodeScalars(q1_5, 2.0976, 0.10);
+		setNodeScalars(q1_6, 2.0, 0.10);
 		//setNodeScalars(q1_6);
 		
 		return Arrays.asList(new NodeMetadata[] {
