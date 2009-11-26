@@ -3,6 +3,7 @@ package org.singinst.uf.model;
 import java.awt.Color;
 import org.singinst.uf.presenter.HtmlUtil;
 
+import org.singinst.uf.common.StringUtil;
 import org.singinst.uf.math.MathUtil;
 
 public abstract class Calculation implements Evaluable {
@@ -34,7 +35,10 @@ public abstract class Calculation implements Evaluable {
 		}
 		double raw = rawEvaluate(htmlConsole);
 		double rounded = MathUtil.round(raw, 12);
-		htmlConsole.append(" = " + HtmlUtil.htmlcolorFromColor(getColor(), rounded) + "<br>\n");
+//		String percentage = MathUtil.round(raw * 100, 2) + "%"; //FIXME
+//		htmlConsole.append(" = " + HtmlUtil.htmlcolorFromColor(getColor(), percentage) + "<br>\n");
+		htmlConsole.append(" = " + HtmlUtil.htmlcolorFromColor(getColor(), StringUtil.formatProbability(raw)) + "<br>\n");
+		
 		return rounded;
 	}
 	

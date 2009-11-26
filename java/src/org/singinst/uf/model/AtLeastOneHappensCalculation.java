@@ -13,7 +13,7 @@ public class AtLeastOneHappensCalculation extends CompositeCalculation {
 		double probabilityOfNot = 1;
 		for (Evaluable calculation : getCalculations()) {
 			probabilityOfNot *= (1 - calculation.evaluate(htmlConsole));
-		}
+		} 
 		htmlConsole.append(getDescription());
 		return 1 - probabilityOfNot;
 	}

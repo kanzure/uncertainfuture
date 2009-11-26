@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.singinst.uf.common.StringUtil;
 import org.singinst.uf.math.MathUtil;
 import org.singinst.uf.presenter.LineBounds;
 import org.singinst.uf.presenter.Store;
@@ -167,7 +168,10 @@ public class ScalarValueHolder implements Evaluable {
 	public double evaluate(StringBuilder htmlConsole) {
 		double retVal = getValue();
 		if (calculation != null) {
-			htmlConsole.append(calculation.getDescription() + " = " + retVal + "<br>");
+//			String percentage = MathUtil.round(retVal * 100, 2) + "%"; //FIXME
+//			htmlConsole.append(calculation.getDescription() + " = " + percentage + "<br>");
+			htmlConsole.append(calculation.getDescription() + " = " + 
+					StringUtil.formatProbability(retVal) + "<br>");
 		}
 		return retVal;
 	}

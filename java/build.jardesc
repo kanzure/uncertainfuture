@@ -11,10 +11,25 @@
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
-        <file path="/java/.classpath"/>
-        <file path="/java/.project"/>
-        <javaElement handleIdentifier="=java/src"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.math{MathUtilTest.java"/>
         <folder path="/java/libs"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter"/>
+        <javaElement handleIdentifier="=java/src&lt;org.apache.commons.math"/>
+        <javaElement handleIdentifier="=java/src&lt;org"/>
+        <file path="/java/.classpath"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.math{LinearTransform.java"/>
+        <file path="/java/.project"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.math{MathUtil.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.math{InvertableFunction.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.common"/>
         <file path="/java/build.jardesc"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.math{SimplePoint.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model"/>
+        <javaElement handleIdentifier="=java/src&lt;org.apache"/>
+        <javaElement handleIdentifier="=java/src&lt;org.apache.commons"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.view"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.math{InvertedFunction.java"/>
     </selectedElements>
 </jardesc>
