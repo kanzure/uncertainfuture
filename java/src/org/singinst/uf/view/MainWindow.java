@@ -29,6 +29,7 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import org.singinst.uf.model.ConclusionReportGenerator;
+
 import org.singinst.uf.model.NodeMetadata;
 import org.singinst.uf.model.NodeMetadataFactory;
 import org.singinst.uf.model.ScalarRelation;
