@@ -1,7 +1,5 @@
 package org.singinst.uf.model;
 
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class ModelUtil {

@@ -1,7 +1,6 @@
 package org.singinst.uf.model;
 
 import java.awt.Color;
-import java.util.List;
 
 import org.singinst.uf.math.MathUtil;
 
@@ -13,7 +12,7 @@ public class AiRelation extends YearwiseCalculationRelation {
 	
 	public AiRelation(Node node) {
 		super(node);
-		this.displayHtml = displayHtml;
+//		this.displayHtml = displayHtml;
 	}
 
 	@Override

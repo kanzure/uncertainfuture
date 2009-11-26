@@ -1,7 +1,6 @@
 package org.singinst.uf.model;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.singinst.uf.math.MathUtil;

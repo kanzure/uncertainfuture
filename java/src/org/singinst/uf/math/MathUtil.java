@@ -582,8 +582,8 @@ public class MathUtil {
 		double m_inst;
 		double dt, science_years=0;
 		EventDiscreteDistribution ej;
-		int i, j, k;
-		double tn;
+		int i, j;//, k;
+//		double tn;
 		for (i=0; i<iters; ++i) {
 			if (i%2==0) {
 			sequencedata_year_Z = RANDOM.nextGaussian();

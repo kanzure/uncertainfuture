@@ -1,18 +1,10 @@
 package org.singinst.uf.math;
 
-import junit.framework.TestCase;
 import junit.framework.Assert;
+import junit.framework.TestCase;
 
-import org.singinst.uf.math.MathUtil;
-//import org.singinst.uf.math.ScienceSpeedModelParameters;
-//import org.singinst.uf.math.ScienceSpeedZValues;
-//import org.singinst.uf.math.ScienceSpeedScenario;
-//import org.singinst.uf.math.ScienceSpeedScenarioReduced;
-//import org.singinst.uf.math.EventDiscreteDistribution;
-//import org.singinst.uf.math.EventDiscreteDistributionSchedule;
-import org.singinst.uf.common.LogUtil;
-import org.apache.commons.math.analysis.UnivariateRealFunction;
 import org.apache.commons.math.analysis.RombergIntegrator;
+import org.apache.commons.math.analysis.UnivariateRealFunction;
 
 public class MathUtilTest extends TestCase {
 

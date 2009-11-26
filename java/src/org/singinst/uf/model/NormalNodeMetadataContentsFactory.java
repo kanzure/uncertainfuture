@@ -4,16 +4,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 import org.singinst.uf.math.MathUtil;
 import org.singinst.uf.math.SimplePoint;
 import org.singinst.uf.presenter.ClickableCurve;
 import org.singinst.uf.presenter.HtmlUtil;
-import org.singinst.uf.presenter.ScalarValuePointList;
 import org.singinst.uf.presenter.LineBounds;
 import org.singinst.uf.presenter.MouseClickListener;
+import org.singinst.uf.presenter.ScalarValuePointList;
 import org.singinst.uf.presenter.SimpleLine;
 import org.singinst.uf.presenter.SimpleStyle;
 

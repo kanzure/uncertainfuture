@@ -5,12 +5,11 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import org.singinst.uf.common.LogUtil;
 import org.singinst.uf.math.SimplePoint;
 import org.singinst.uf.presenter.DraggableLine;
 import org.singinst.uf.presenter.HtmlUtil;
-import org.singinst.uf.presenter.ScalarValuePointList;
 import org.singinst.uf.presenter.LineBounds;
+import org.singinst.uf.presenter.ScalarValuePointList;
 import org.singinst.uf.presenter.SimpleStyle;
 
 public class MooreAsymptote {

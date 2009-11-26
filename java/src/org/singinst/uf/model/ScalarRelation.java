@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import org.singinst.uf.math.MathUtil;
 import org.singinst.uf.math.SimplePoint;
 import org.singinst.uf.presenter.ScalarValuePointList;
 

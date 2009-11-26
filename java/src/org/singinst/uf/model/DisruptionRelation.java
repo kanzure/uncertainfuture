@@ -2,7 +2,6 @@ package org.singinst.uf.model;
 
 //import java.util.List;
 
-import org.singinst.uf.math.MathUtil;
 
 public class DisruptionRelation extends YearwiseCalculationRelation {
 
