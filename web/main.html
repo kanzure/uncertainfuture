@@ -23,7 +23,7 @@ archive:'UfApplet.jar,commons-math-1.2.jar',  width:900, height:660, mayscript: 
 /*		clog("loadData:" + JSON.stringify(jsonObj));*/
 	  var json = JSON.stringify(jsonObj);
 	  if (getBrowser() == "ie") {
-	    alert("We're sorry, but this functionality isn't currently supported in IE.");
+	    alert("We're sorry, but this functionality isn't currently supported in IE. Please consider switching to Firefox or Opera.");
 	  } else {
       top.document.applets[0].loadData(json); // This fails on IE
 	  }
