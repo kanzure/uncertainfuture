@@ -24,7 +24,7 @@ public class IncidentExtremeNodeMetadataContentsFactory extends YearExtremeNodeM
 	public ConclusionReportGenerator getConclusionGenerator() {
 		return new ConclusionReportGenerator() {
 			public String getText(ScalarValueHolder scalarValueHolder, double value) {
-				return "The likelihood at year " + getYearString() + " has a 90% chance of being between " +
+				return "The logarithm of the instantaneous rate at year " + getYearString() + " has a 90% chance of being between " +
 				HtmlUtil.green(getScalars().get(0).getScalarValueHolder().getValue()) + 
 				" and " + HtmlUtil.red(getScalars().get(2).getScalarValueHolder().getValue());
 			}

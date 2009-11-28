@@ -33,8 +33,10 @@ public class NodeMetadataFactory {
 		setNodeScalars(q1_3, 12.5, 2.25);
 		setNodeScalars(q1_4, 5, 1);
 //		setNodeScalars(q1_5, 2018, 0.005);
+		
 		setNodeScalars(q1_5, 2.0976, 0.10);
-		setNodeScalars(q1_6, 2.0, 0.10);
+		setNodeScalars(q1_6, 2.0, 0.10);		
+		
 		//setNodeScalars(q1_6);
 		
 		return Arrays.asList(new NodeMetadata[] {
