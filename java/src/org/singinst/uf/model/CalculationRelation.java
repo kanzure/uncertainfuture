@@ -134,7 +134,8 @@ public abstract class CalculationRelation extends ScalarRelation {
 			
 			@Override
 			public Color getColor(){
-				return Color.GREEN;
+				//return Color.GREEN;
+				return new Color(0, 100, 50); // Dark green
 			}
 			
 			

@@ -191,36 +191,42 @@ class MainWindow {
 		//JLabel question = new JLabel(nodeMetadata.getUserText().getQuestion(), SwingConstants.CENTER);
 		JLabel question = new JLabel(nodeMetadata.getUserText().getQuestion());
 		//question.setEditable(false);
-		question.setForeground(Color.RED);
+//		question.setForeground(Color.RED); 
+		
+		// Set color of question text to dark blue
+		question.setForeground(new Color(0, 50, 100));
+		
 		//question.setLineWrap(true);
 		//question.setWrapStyleWord(true);
 		question.setMaximumSize(question.getPreferredSize());
 		
 		JPanel prevQuestionNextBox = new JPanel(new BorderLayout());//Box.createHorizontalBox();
 		
-		JButton prev = new JButton("Previous");
+		final JButton prev = new JButton("Previous");
+		final JButton next = new JButton("Next");
+		
 		prev.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int index = pane.getSelectedIndex();
 				if (index > 0) {
 					AppletBrowser.getInstance().loadPage(nodeNames.get(index-1));
 					pane.setSelectedIndex(index-1);
-				}
+				} 	
+				
 				Status.singleton.setValue("");
-			}
-			
+			}									
 		});
 		prevQuestionNextBox.add(prev, BorderLayout.WEST);
 		
 		prevQuestionNextBox.add(question, BorderLayout.CENTER);
 		
-		JButton next = new JButton("Next");
 		next.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int index = pane.getSelectedIndex();
 				if (index+1 < nodeNames.size()) {
 					AppletBrowser.getInstance().loadPage(nodeNames.get(index+1));
-					pane.setSelectedIndex(index+1);
+					index++;
+					pane.setSelectedIndex(index);
 				}
 				Status.singleton.setValue("");
 			}
