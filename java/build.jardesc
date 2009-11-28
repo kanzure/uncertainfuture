@@ -13,7 +13,6 @@
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.math{MathUtilTest.java"/>
         <folder path="/java/libs"/>
-        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{LineBounded.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{MouseClickListener.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{ClippedCanvas.java"/>
