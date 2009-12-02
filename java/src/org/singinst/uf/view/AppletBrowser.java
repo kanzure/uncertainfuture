@@ -1,6 +1,16 @@
 package org.singinst.uf.view;
 
 import java.applet.Applet;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.html.HTMLDocument;
@@ -14,6 +24,7 @@ public class AppletBrowser {
 	private DOMService service;
 	private static AppletBrowser instance;
 	private final Applet applet;
+	private static BufferedWriter log = null;
 	public AppletBrowser(Applet applet) {
 		this.applet = applet;
 		try {
@@ -22,10 +33,44 @@ public class AppletBrowser {
 			e.printStackTrace();
 		}
 	}
+	
+//	private void log(String msg) {
+//		if (log == null) {			
+////			File logFile = new File("uf-log" + new SimpleDateFormat("yyMMdd").format(new Date()) + ".log");
+//			File logFile = null;
+//			try {
+//				logFile = File.createTempFile("uf-log", "log");
+//			} catch (IOException e1) {
+//				e1.printStackTrace();
+//			}
+//			OutputStream outStream = null;
+//			try {
+//				outStream = new FileOutputStream(logFile);
+//			} catch (FileNotFoundException e) {
+//				e.printStackTrace();
+//			}
+//			log = new BufferedWriter(new OutputStreamWriter(outStream));
+//			System.out.println("FIXME: Created log file " + logFile.getAbsolutePath());
+//		}
+//		try {
+//			log.write(msg + "\n");
+//			log.flush();
+//			System.out.println("FIXME: " + msg);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+////		try {
+////			log.close();
+////		} catch (IOException e) {
+////			e.printStackTrace();
+////		}
+//	}
+	
 	public void loadPage(final String helpName) {
-		System.out.println("FIXME: loadPage(" + helpName + ")");
+//		log("loadPage(" + helpName + ")");
+		
 		if (service != null) {
-			System.out.println("FIXME: service != null");
+//			log("service != null");
 		    try {
 				service.invokeAndWait(new DOMAction()
 				{
@@ -33,7 +78,7 @@ public class AppletBrowser {
 				    {
 				         HTMLDocument doc = (HTMLDocument) accessor.getDocument(applet);
 				         Element element = doc.getElementById("sidebar");
-				         System.out.println("doc: " + doc + ", element: " + element);
+//				         log("doc: " + doc + ", element: " + element);
 				         //for (int i = 0; i < nodeList.getLength(); i++) {
 				        	 //Node node = nodeList.item(i);
 				        	 //if (node instanceof Element) {
