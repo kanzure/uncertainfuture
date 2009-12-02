@@ -23,7 +23,9 @@ public class AppletBrowser {
 		}
 	}
 	public void loadPage(final String helpName) {
+		System.out.println("FIXME: loadPage(" + helpName + ")");
 		if (service != null) {
+			System.out.println("FIXME: service != null");
 		    try {
 				service.invokeAndWait(new DOMAction()
 				{
@@ -31,6 +33,7 @@ public class AppletBrowser {
 				    {
 				         HTMLDocument doc = (HTMLDocument) accessor.getDocument(applet);
 				         Element element = doc.getElementById("sidebar");
+				         System.out.println("doc: " + doc + ", element: " + element);
 				         //for (int i = 0; i < nodeList.getLength(); i++) {
 				        	 //Node node = nodeList.item(i);
 				        	 //if (node instanceof Element) {
