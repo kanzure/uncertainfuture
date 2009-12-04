@@ -7,10 +7,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.singinst.uf.common.LogUtil;
 import org.singinst.uf.common.StringUtil;
 import org.singinst.uf.math.MathUtil;
 import org.singinst.uf.presenter.LineBounds;
 import org.singinst.uf.presenter.Store;
+import org.singinst.uf.view.ViewUtil;
 
 public class ScalarValueHolder implements Evaluable {
 	@Override
@@ -29,6 +31,12 @@ public class ScalarValueHolder implements Evaluable {
 		this.scalarSchema = scalarSchema;
 		try {
 			Store s = Store.getInstance();
+			if (s == null) {
+				LogUtil.info("ScalarValueHolder.init(): Store instance is null!");
+			}
+			if (scalarSchema == null) {
+				LogUtil.info("ScalarValueHolder.init(): scalarSchema is null!");
+			}
 			Double storedValue = s.get(scalarSchema.getKey());
 			if (storedValue == null) {
 				this.value = value;
@@ -51,7 +59,8 @@ public class ScalarValueHolder implements Evaluable {
 		timestamp = System.currentTimeMillis();
 		this.value = constrainedValue;
 		notifyListeners();
-		org.singinst.uf.common.LogUtil.info("storing with key \"" + scalarSchema.getKey() + "\" and value of "+value);
+		
+		LogUtil.info("storing with key \"" + scalarSchema.getKey() + "\" and value of "+value);
 		try {
 			Store s = Store.getInstance();
 			s.put(scalarSchema.getKey(), value);

@@ -11,24 +11,29 @@
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.view{ViewUtil.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.view{AppletStore.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{AtLeastOneHappensCalculation.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.math{InvertableFunction.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{MooresLawNodeMetadataContentsFactory.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{SummarySource.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{LogBounds.java"/>
-        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{MooreAsymptote.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{AxisDirection.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{MooreAsymptote.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{ScalarSubIDString.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{MooreConstraint.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{GraphCanvas.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{IncidentFunction.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{SimpleLine.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.view{SwingHelp.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{AxisSample.java"/>
-        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{SimpleStyle.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{ScalarValueDependency.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{SimpleStyle.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{NormalNodeMetadataContentsFactory.java"/>
         <file path="/java/src/org/singinst/uf/model/UiTextConstant.java~"/>
         <file path="/java/.classpath"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.view{TextScalarBinder.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.view{MainWindow.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{YearwiseCalculationRelation.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{DraggableLine.java"/>
         <file path="/java/libs/commons-math-1.2.jar"/>
@@ -42,27 +47,26 @@
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.math{MathUtilTest.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{Evaluable.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{YearExtremeNodeMetadataContentsFactory.java"/>
-        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{NodeMetadataFactory.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{MouseClickListener.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{NodeMetadataFactory.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{LineBounds.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.math{MathUtil.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{ResearchersNodeMetadataContentsFactory.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.common{StringUtil.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{UfHelp.java"/>
-        <javaElement handleIdentifier="=java/src&lt;org.apache"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{ScaledCanvas.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{NodeMetadataBuilder.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{PowerFunction.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{GeneLearningExtreme.java"/>
-        <javaElement handleIdentifier="=java/src&lt;org.apache.commons.math"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{GeneLearningNodeMetadataContentsFactory.java"/>
-        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{MooreDraggableLine.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{Store.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{MooreDraggableLine.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.math{SimplePoint.java"/>
         <file path="/java/build.jardesc"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{NeuromorphicAiRelation.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{UiText.java"/>
-        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{NotablePercentile.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{GraphTransform.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{NotablePercentile.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{NeedsCalcCache.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{NormalConstraint.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{OtherIaExtreme.java"/>
@@ -70,31 +74,36 @@
         <file path="/java/.project"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{Axis.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{ConclusionReportGenerator.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.view{RangeScalarBinder.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{Calculation.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.view{SwingGraphCanvas.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{Completion.java"/>
-        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{ScalarRelation.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{ScalarValueHolder.java"/>
-        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{RescheduledEventsRelation.java"/>
-        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{PercentileDraggableLine.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{ScalarRelation.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.view{AppletBrowser.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{NodeIDString.java"/>
-        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{ScalarSchema.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{PercentileDraggableLine.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{RescheduledEventsRelation.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{IncidentExtremeNodeMetadataContentsFactory.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{ScalarSchema.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{CanvasString.java"/>
-        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.common"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{ValueListener.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{NumericEntry.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{ClickableCurve.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{MooresLawData.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.view{UfApplet.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{LineBounded.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{MultiplicationCalculation.java"/>
-        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{ModelUtil.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{CompositeCalculation.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{ModelUtil.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.view{Graph.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{IncidentBounds.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{PlaneBounded.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{NodeMetadata.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{ProxyCanvas.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{UiTextConstant.java"/>
-        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.view"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.view{SwingStyle.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.apache.commons.math{MathException.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{MouseDragListener.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{CalculationRelation.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{OtherIaNodeMetadataContentsFactory.java"/>
@@ -104,8 +113,9 @@
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{HtmlUtil.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{SimpleColor.java"/>
         <javaElement handleIdentifier="=java/src&lt;org"/>
-        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{Node.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.common{LogUtil.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.math{LinearTransform.java"/>
+        <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{Node.java"/>
         <file path="/java/libs/junit-4.6.jar"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.model{HazardRateNodeMetadataContentsFactory.java"/>
         <javaElement handleIdentifier="=java/src&lt;org.singinst.uf.presenter{RelationPresentation.java"/>

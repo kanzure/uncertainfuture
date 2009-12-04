@@ -6,6 +6,10 @@ import java.util.List;
 import org.singinst.uf.presenter.NumericEntry;
 
 public class NodeMetadataFactory {
+	/**
+	 * Create all nodes (tabs) and set default values.
+	 * @return
+	 */
 	public static List<NodeMetadata> createTheNetwork() {
 		NodeMetadata q1_1 = constructQ1_1Builder().build();
 		NodeMetadata q1_2 = constructQ1_2Builder().build();

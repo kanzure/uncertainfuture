@@ -12,6 +12,10 @@ public abstract class Store {
 	public abstract Double get(String key);
 	public abstract void put(String key, double value);
 	
+	/**
+	 * Load data (expert claim). This is called from the browser.
+	 * @param jsonSubset
+	 */
 	public void loadData(String jsonSubset) {
 		try {
 			attemptLoad(jsonSubset);

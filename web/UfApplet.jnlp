@@ -6,10 +6,11 @@
        <offline-allowed />
      </information>
      <resources>
-       <j2se version="1.6+"
+       <j2se version="1.5+"
              href="http://java.sun.com/products/autodl/j2se" />
        <jar href="UfApplet.jar" main="true" />
        <jar href="commons-math-1.2.jar" />
+       <jar href="plugin.jar" />
      </resources>
      <applet-desc 
          name="The Uncertain Future"

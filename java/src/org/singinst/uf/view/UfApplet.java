@@ -37,9 +37,6 @@ public class UfApplet extends JApplet {
     	Store.getInstance().loadData(jsonSubset);
     }
 
-	/**
-	 * 
-	 */
 	private void createGUI() {
 		try {
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel"); 
