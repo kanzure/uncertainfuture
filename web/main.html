@@ -8,7 +8,7 @@
 <!--		<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script> -->
 		<script type="text/javascript" src="js/json2.js"></script>
 		<script type="text/javascript">
-var debug = 2;
+var debug = 0;
 
 // Print debug messages if debug > 0
 function clog(str) {
@@ -22,11 +22,12 @@ function clog(str) {
 function loadData(jsonObj) {
 	clog("loadData:" + JSON.stringify(jsonObj));
 	var json = JSON.stringify(jsonObj);
-//  	if (getBrowser() == "ie") {
-//    	alert("We're sorry, but this functionality isn't currently supported in Internet Explorer. Please consider using to Firefox or Opera.");
-//	} else {
+  	if (getBrowser() == "ie") {
+    	alert("We're sorry, but this functionality isn't currently supported in Internet Explorer. Please consider using to Firefox or Opera.");
+	} else {
+		clog(top.document.applets[0]);
 		top.document.applets[0].loadData(json); // This fails on IE
-//	}
+	}
 }
 
 function getOS() {
@@ -63,8 +64,7 @@ function checkBrowser() {
     	alert("We're sorry, but Firefox on Mac OS X does not support all features of this site. Please consider using Safari or Opera if you experience any problems.");
 	} else if (browser == "ie") {
     	alert("We're sorry, but Internet Explorer does not support all features of this site. Please consider using Firefox or Opera if you experience any problems.");
-	}
-	
+	}	
 }
 
     </script>
